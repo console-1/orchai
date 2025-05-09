@@ -47,5 +47,55 @@ Orchai is an agentic AI framework that creates orchestrator agents and their sub
 - Lint and format code with `ruff`.
 - Run and develop agents using the provided framework and Venice.ai API integration.
 
+### Detailed Usage Examples
+1. **Running the Orchestrator:**
+   ```bash
+   just run-orchestrator
+   ```
+
+2. **Developing a New Sub-Agent:**
+   - Create a new file in the `agents/` directory.
+   - Implement the sub-agent class by inheriting from the base agent class.
+   - Register the new sub-agent with the orchestrator.
+
+3. **Using the Venice.ai API:**
+   - Ensure your API key is set in the `.env` file.
+   - Use the provided API client to interact with Venice.ai services.
+
+## Contributing
+We welcome contributions to the Orchai project! Please follow these guidelines to contribute:
+
+1. **Fork the repository:**
+   - Click the "Fork" button on the top right of the repository page.
+
+2. **Create a new branch:**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes:**
+   - Ensure your code follows the project's coding standards.
+   - Write tests for your changes.
+
+4. **Commit your changes:**
+   ```bash
+   git commit -m "Add your commit message here"
+   ```
+
+5. **Push to your branch:**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+6. **Create a pull request:**
+   - Go to the repository page and click "New pull request".
+
+## Support
+If you need help or have any questions, please feel free to reach out:
+
+- **Issue Tracker:** Report issues or request features on the [GitHub Issues](https://github.com/your-repo/issues) page.
+- **Email:** Contact us at [support@orchai.com](mailto:support@orchai.com).
+- **Community Forum:** Join the discussion on our [community forum](https://community.orchai.com).
+
 ## License
 MIT

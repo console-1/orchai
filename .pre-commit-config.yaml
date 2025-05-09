@@ -1,0 +1,74 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+
+  - repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+      - id: black
+        language_version: python3.8
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        additional_dependencies: [flake8-bugbear, flake8-comprehensions]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.910
+    hooks:
+      - id: mypy
+        additional_dependencies: [pydantic]
+
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.9.6
+    hooks:
+      - id: pylint
+        additional_dependencies: [pylint-django]
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.9.3
+    hooks:
+      - id: isort
+        additional_dependencies: [isort[pyproject]]
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier
+        additional_dependencies: [prettier-plugin-python]
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v7.32.0
+    hooks:
+      - id: eslint
+        additional_dependencies: [eslint-plugin-python]
+
+  - repo: https://github.com/pre-commit/mirrors-stylelint
+    rev: v13.13.1
+    hooks:
+      - id: stylelint
+        additional_dependencies: [stylelint-config-standard]
+
+  - repo: https://github.com/pre-commit/mirrors-yamllint
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        additional_dependencies: [yamllint-config-standard]
+
+  - repo: https://github.com/pre-commit/mirrors-ruff
+    rev: v0.0.1
+    hooks:
+      - id: ruff
+        additional_dependencies: [ruff[pyproject]]
+
+  - repo: https://github.com/pre-commit/mirrors-pytest
+    rev: v6.2.5
+    hooks:
+      - id: pytest
+        additional_dependencies: [pytest-cov]
